@@ -2,3 +2,14 @@
 <input [(ngModel)]="newBookTitle" placeholder="Title" />
 <input [(ngModel)]="newBookAuthor" placeholder="Author" />
 <button (click)="addBook()">Add Book</button>
+
+<h2 class="text-center mt-5">Books</h2>
+<ul class="list-group mt-3">
+  <li
+    class="list-group-item d-flex justify-content-between align-items-center"
+    *ngFor="let appointment of books; index as i"
+  >
+    {{ appointment.id }} {{ appointment.title }}
+    <b>BY {{ appointment.author }} </b>
+  </li>
+</ul>
