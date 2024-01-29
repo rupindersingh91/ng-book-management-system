@@ -11,5 +11,8 @@
   >
     {{ appointment.id }} {{ appointment.title }}
     <b>BY {{ appointment.author }} </b>
+    <button class="btn btn-danger" (click)="deleteBook(i)">
+        Delete
+      </button>
   </li>
 </ul>

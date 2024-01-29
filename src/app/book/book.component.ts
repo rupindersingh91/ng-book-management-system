@@ -48,4 +48,17 @@ export class BookComponent implements OnInit {
       localStorage.setItem("books", JSON.stringify(this.books))
     }
   }
+
+  /**
+   * Deletes a book from the library.
+   * 
+   * @param index - The index of the book to delete.
+   */
+  deleteBook(index: number) {
+    // Remove the book from the array
+    this.books.splice(index, 1);
+
+    // Update the local storage
+    localStorage.setItem("books", JSON.stringify(this.books));
+  }
 }
